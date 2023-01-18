@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI calculator</title>
     <script src="assets/scripts/app.js"></script>
+    <link href="assets/styles/app.css" rel="stylesheet">
 </head>
-<body>
-    
+
+<body class="bg-black text-center font-mono">
+    <div style="padding: 5% 20%;" class="">
+        <h1 class="text-white text-6xl">BMI calculator</h1>
+        <div style="padding: 5% 0;">
+            <div class="mb-6 flex flex-col justify-center items-center">
+                <label for="default-input" class="block mb-2 text-sm text-white font-medium">Height(cm)</label>
+                <input type="text" id="default-input"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg">
+            </div>
+            <div class="mb-6 flex flex-col justify-center items-center">
+                <label for="default-input" class="block mb-2 text-sm text-white font-medium">Weight(kg)</label>
+                <input type="text" id="default-input"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg">
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
