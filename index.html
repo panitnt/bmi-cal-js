@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI calculator</title>
-    <script src="assets/scripts/app.js"></script>
+    <script src="assets/scripts/vendor.js" defer></script>
+    <script src="assets/scripts/app.js" defer></script>
     <link href="assets/styles/app.css" rel="stylesheet">
 </head>
 
@@ -15,16 +16,23 @@
         <h1 class="text-white text-6xl">BMI calculator</h1>
         <div style="padding: 5% 0;">
             <div class="mb-6 flex flex-col justify-center items-center">
-                <label for="default-input" class="block mb-2 text-sm text-white font-medium">Height(cm)</label>
-                <input type="text" id="default-input"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg">
+                <label for="weight-input" class="block mb-2 text-sm text-white font-medium">Weight(kg)</label>
+                <input type="number" id="weight-input" value="50"
+                    class="bg-gray-50 border border-gray-300 rounded-lg h-8">
             </div>
+            <div id="alert-weight" class="text-red-500"></div>
             <div class="mb-6 flex flex-col justify-center items-center">
-                <label for="default-input" class="block mb-2 text-sm text-white font-medium">Weight(kg)</label>
-                <input type="text" id="default-input"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg">
+                <label for="height-input" class="block mb-2 text-sm text-white font-medium">Height(cm)</label>
+                <input type="number" id="height-input" value="150"
+                    class="bg-gray-50 border border-gray-300 rounded-lg h-8">
             </div>
+            <div id="alert-height" class="text-red-500"></div>
         </div>
+        <button id="calculate-button" class="bg-white text-gray-800 font-semibold rounded-lg">Calculate</button>
+        <button id="reset-button" class="bg-white text-gray-800 font-semibold rounded-lg">reset</button>
+        <div id="show-bmi" class="text-white text-3xl" style="padding: 5% 0;"></div>
+        <div id="alert-error" class="text-red-500"></div>
+    
     </div>
 </body>
 
